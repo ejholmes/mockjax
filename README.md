@@ -1,4 +1,4 @@
-# Mockjax
+# Mockjax [![travis-ci](https://secure.travis-ci.org/ejholmes/mockjax.png)](https://secure.travis-ci.org/ejholmes/metaforce)
 
 Mockjax gem for rails and rack applications. Define javascript mocks in your
 request specs
