@@ -1,0 +1,7 @@
+<script type="text/javascript">
+    $(function() {
+        $.getJSON('/api/foo', function(data) {
+            $('body').prepend(data.message);
+        });
+    });
+</script>
