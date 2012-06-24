@@ -47,6 +47,14 @@ before do
 end
 ```
 
+Now we can make requests to `/test` from javascript and our mock will be used.
+Awesome!
+
+```coffeescript
+$.getJSON '/test', (data) -> console.log(data.message)
+# => 'hello world'
+```
+
 ## Contributing
 
 1. Fork it
