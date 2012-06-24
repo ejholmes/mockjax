@@ -15,6 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Mockjax::VERSION
 
+  gem.add_dependency 'json'
   gem.add_dependency 'rack'
 
   gem.add_development_dependency 'rake'
