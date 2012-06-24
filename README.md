@@ -24,8 +24,6 @@ Assuming you're using capybara...
 
 ```ruby
 # spec/spec_helper.rb
-Mockjax.path_to_js = '/path/to/jquery.mockjax.js'
-
 Capybara.app = Rack::Build.new {
     use Rack::Mockjax
     run MyApp
