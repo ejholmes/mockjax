@@ -25,7 +25,7 @@ module Mockjax
     end
 
     def path_to_js
-      @path_to_js || '/assets/jquery.mockjax.js'
+      @path_to_js || (defined?(::Rails) ? '/assets/jquery.mockjax.js' : 'https://raw.github.com/appendto/jquery-mockjax/master/jquery.mockjax.js')
     end
   end
 

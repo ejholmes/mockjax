@@ -5,4 +5,4 @@ require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new(:spec)
 
-taks :default => :spec
+task :default => :spec
