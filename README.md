@@ -41,7 +41,7 @@ Then define your stubs like you would with any other stubbing library:
 
 ```ruby
 before do
-  mockjax url: '/test', responseText: { message: 'hello world' }
+  stub_ajax url: '/test', responseText: { message: 'hello world' }
 end
 ```
 

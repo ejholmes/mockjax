@@ -34,6 +34,7 @@ module Mockjax
     def mockjax(*args)
       Mockjax.mock(*args)
     end
+    alias :stub_ajax :mockjax
   end
 end
 

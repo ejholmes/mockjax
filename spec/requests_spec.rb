@@ -1,12 +1,25 @@
 require 'spec_helper'
 
 describe "Requests", :type => :request do
-  before do
-    mockjax url: '/api/foo', responseText: { message: 'bar' }
+  describe "mockjax helper" do
+    before do
+      mockjax url: '/api/foo', responseText: { message: 'bar' }
+    end
+
+    it "mocks the request" do
+      visit '/foo'
+      page.should have_content 'bar'
+    end
   end
 
-  it "mocks the request" do
-    visit '/foo'
-    page.should have_content 'bar'
+  describe "stub_ajax helper" do
+    before do
+      stub_ajax url: '/api/foo', responseText: { message: 'bar' }
+    end
+
+    it "mocks the request" do
+      visit '/foo'
+      page.should have_content 'bar'
+    end
   end
 end
