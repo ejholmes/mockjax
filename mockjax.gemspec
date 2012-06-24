@@ -4,9 +4,9 @@ require File.expand_path('../lib/mockjax/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Eric J. Holmes"]
   gem.email         = ["eric@ejholmes.net"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{Ruby gem for using jquery mockjax within rspec examples}
+  gem.summary       = %q{Ruby gem for using jquery mockjax within rspec examples}
+  gem.homepage      = "https://github.com/ejholmes/mockjax"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
