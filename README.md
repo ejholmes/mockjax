@@ -18,6 +18,7 @@ Assuming you're using capybara...
 
 ```ruby
 # spec/spec_helper.rb
+
 Capybara.app = Rack::Build.new {
     use Rack::Mockjax
     run MyApp
@@ -28,6 +29,7 @@ Capybara.app = Rack::Build.new {
 
 ```ruby
 # config/initializers/test.rb
+
 config.middleware.use Rack::Mockjax
 ```
 
