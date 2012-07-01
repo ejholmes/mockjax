@@ -24,7 +24,13 @@ module Mockjax
     end
 
     def path_to_js
-      @path_to_js || (defined?(::Rails) ? '/assets/jquery.mockjax.js' : 'https://raw.github.com/appendto/jquery-mockjax/master/jquery.mockjax.js')
+      @path_to_js || begin
+        if defined?(::Rails)
+          '/assets/jquery.mockjax.js'
+        else
+          'https://raw.github.com/appendto/jquery-mockjax/master/jquery.mockjax.js'
+        end
+      end
     end
   end
 
@@ -38,7 +44,7 @@ module Mockjax
 end
 
 RSpec.configure do |config|
-  config.include Mockjax::Helpers
+  config.include Mockjax::Helpers, :type => :request
 
   config.after(:each) do
     Mockjax.cleanup
