@@ -7,15 +7,9 @@ request specs
 
 Add this line to your application's Gemfile:
 
-    gem 'mockjax'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install mockjax
+```ruby
+gem 'mockjax'
+```
 
 ## Usage
 Assuming you're using capybara...
@@ -24,6 +18,7 @@ Assuming you're using capybara...
 
 ```ruby
 # spec/spec_helper.rb
+
 Capybara.app = Rack::Build.new {
     use Rack::Mockjax
     run MyApp
@@ -34,6 +29,7 @@ Capybara.app = Rack::Build.new {
 
 ```ruby
 # config/initializers/test.rb
+
 config.middleware.use Rack::Mockjax
 ```
 
@@ -49,14 +45,5 @@ Now we can make requests to `/test` from javascript and our mock will be used.
 Awesome!
 
 ```coffeescript
-$.getJSON '/test', (data) -> console.log(data.message)
-# => 'hello world'
+$.getJSON '/test', (data) -> console.log(data.message) # => 'hello world'
 ```
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
