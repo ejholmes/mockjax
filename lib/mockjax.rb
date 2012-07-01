@@ -8,12 +8,11 @@ require 'mockjax/rack'
 module Mockjax
   class << self
     def mock(options)
-      @mocks ||= []
-      @mocks << options
+      mocks << options
     end
 
     def mocks
-      @mocks || []
+      @mocks ||= []
     end
 
     def cleanup
