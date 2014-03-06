@@ -44,7 +44,7 @@ module Mockjax
 end
 
 RSpec.configure do |config|
-  config.include Mockjax::Helpers, :type => :request
+  config.include Mockjax::Helpers, :type => :feature
 
   config.after(:each) do
     Mockjax.cleanup
