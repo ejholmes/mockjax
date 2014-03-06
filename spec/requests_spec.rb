@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Requests", :type => :request do
+describe "Requests", :type => :feature do
   describe "mockjax helper" do
     before do
       mockjax url: '/api/foo', responseText: { message: 'bar' }

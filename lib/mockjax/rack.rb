@@ -8,9 +8,12 @@ class Rack::Mockjax
 
   def call(env)
     @status, @headers, @body = @app.call(env)
-    @body = @body.to_a.join
-    insert!
-    [@status, @headers, [@body]]
+    if @body.instance_of? Rack::BodyProxy
+      @body = @body.body.join
+      insert!
+      @body = Array(@body)
+    end
+    [@status, @headers, @body]
   end
 
   def insert!
