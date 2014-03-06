@@ -28,7 +28,7 @@ module Mockjax
         if defined?(::Rails)
           '/assets/jquery.mockjax.js'
         else
-          'https://raw.github.com/appendto/jquery-mockjax/master/jquery.mockjax.js'
+          'https://cdnjs.cloudflare.com/ajax/libs/jquery-mockjax/1.5.3/jquery.mockjax.min.js'
         end
       end
     end
